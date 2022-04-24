@@ -1,0 +1,76 @@
+.modalTitle {
+  color: orange;
+  font-weight: 620;
+}
+
+.modal {
+  min-width: 40%;
+}
+
+.modal i {
+  position: absolute;
+  right: -5%;
+  top: -10%;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal div {
+  margin: 20px;
+}
+
+.modal div small {
+  font-size: 14px;
+}
+
+.modal div p {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.modal div form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal div form p {
+  color: gray;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 2%;
+}
+
+.modal div form span {
+  margin-bottom: 25px;
+  max-height: 50px;
+}
+
+.modal div form span select {
+  -webkit-appearance: media-fullscreen-button;
+  height: 40px;
+  width: 43%;
+  margin-right: 3%;
+  padding-left: 10px;
+}
+
+.modal div form span input {
+  width: 43%;
+  height: 40px;
+}
+
+.modal div form textarea {
+  max-width: 89%;
+}
+
+.modal div form button {
+  max-width: 15%;
+  text-align: center;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  margin-left: 80%;
+}

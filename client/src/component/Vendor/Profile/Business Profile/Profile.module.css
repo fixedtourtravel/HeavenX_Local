@@ -1,0 +1,53 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.profileSection {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profileSection div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attachment {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.attachment_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textinput {
+  width: 100%;
+}
+
+.approve {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.formgroup {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.autocomp {
+  min-width: 100%;
+  height: 15px;
+}

@@ -1,0 +1,25 @@
+.home {
+  flex-grow: 50;
+  flex-shrink: 50;
+  margin: 20px;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sort_select {
+  margin-right: 20px;
+  margin-left: 10px;
+  border: 1px solid black;
+  width: fit-content;
+}
+
+.sort button {
+  margin-top: 0%;
+  margin-left: 0%;
+  font-weight: 600;
+  margin-right: 20px;
+}

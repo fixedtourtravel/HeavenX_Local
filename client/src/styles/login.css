@@ -1,0 +1,75 @@
+.loginpage {
+  height: 85vh;
+  background-image: url("./loginbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.loginBox {
+  margin-top: 70px;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  padding: 36px;
+  border-radius: 30px;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-switch div {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  padding: 4px 8px 4px 8px;
+}
+
+.loginactive {
+  background-color: #035c22 !important;
+  min-width: 90px;
+  text-align: center;
+}
+
+.loginnotactive {
+  background-color: #6fc990 !important;
+  min-width: 90px;
+  text-align: center;
+}
+
+.login-btn {
+  width: 100%;
+  padding-top: 12px !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  background-color: #6fc990 !important;
+}
+.login-btn:active {
+  outline: none;
+}
+.login-btn-text {
+  font-weight: 600;
+}
+.login-signup-text {
+  font-size: 22px;
+  font-weight: 300;
+}
+.login-signup-link {
+  text-decoration: none !important;
+  color: #00c2cb;
+  font-weight: 500;
+}
+.login-signup-link:hover {
+  color: #059ea7;
+}

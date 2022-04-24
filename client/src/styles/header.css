@@ -1,0 +1,46 @@
+.call-icon {
+  color: rgb(27, 173, 27);
+}
+.material-icon {
+  position: relative;
+  top: 5px;
+}
+.signIn-Btn {
+  padding: 0px 18px 7px 12px;
+  font-size: 16px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, #3dc1db, #207eb1) !important;
+  margin-left: 100px;
+}
+
+.signIn-Btn:hover {
+  opacity: 0.75;
+}
+
+.header-Menubar {
+  padding-top: 0px;
+  padding-right: 80px;
+}
+
+.helplineNo {
+  font-size: 22px;
+}
+.header-title {
+  font-style: italic;
+}
+.header-subtitle {
+  margin-top: -15px;
+  font-weight: 200;
+}
+
+.menubar-item {
+  cursor: pointer;
+  font-weight: 650 !important;
+}
+.menubar-item.active {
+  color: #ff9f1c;
+}
+.react-icons {
+  color: red;
+  height: 2em;
+}

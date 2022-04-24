@@ -1,0 +1,295 @@
+.home {
+  overflow-x: hidden;
+}
+
+.booking-row {
+  display: flex;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+.booking-img {
+  align-items: center;
+  flex-grow: 0;
+  min-width: 15%;
+  max-width: 20%;
+  max-height: 300px;
+}
+
+.booking-img img {
+  border-radius: 5px;
+}
+
+.booking-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-grow: 3;
+}
+
+.orderId,
+.place,
+.totalPerson {
+  margin-left: 10px;
+}
+
+.totalPerson img {
+  width: 20px;
+}
+
+.place {
+  font-size: 20px;
+}
+
+.orderId {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.totalPerson span {
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.totalPerson span > .MuiSvgIcon-root {
+  color: #58e0e0;
+}
+
+.place strong {
+  font-size: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.startDate,
+.duration,
+.endDate {
+  font-weight: 550;
+}
+
+.startDate::after {
+  content: "";
+  border-left: 5px dotted rgb(82, 173, 189);
+  display: block;
+  height: 5px;
+  margin-left: 48%;
+  margin-bottom: 2px;
+}
+
+.endDate::before {
+  content: "";
+  border-bottom: 5px dotted rgb(82, 173, 189);
+  display: block;
+  width: 5px;
+  margin-left: 47.5%;
+  margin-top: 2px;
+}
+
+.duration::after,
+.duration::before {
+  content: "";
+  border-left: 2px dotted rgb(82, 173, 189);
+  display: block;
+  height: 15px;
+  margin-left: 50%;
+}
+
+.booking-payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.booking-payment small {
+  font-size: 25px;
+  color: rgb(6, 129, 6);
+  text-align: center;
+  font-weight: 500;
+}
+
+.booking-payment div {
+  font-size: 10px;
+}
+
+.booking-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.booking-price span {
+  font-size: 20px;
+  padding: 5px;
+  border: 2px dashed rgb(248, 105, 53);
+  font-weight: 700;
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.actionRow1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconV {
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: 999;
+}
+
+.icon {
+  position: relative;
+  margin-left: 30px;
+  margin-right: 30px;
+  z-index: 999;
+}
+
+.iconV p {
+  display: none;
+}
+
+.iconV:hover p {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: -100%;
+  background-color: #ff6161;
+  color: white;
+  padding: 2px 3px 2px 3px;
+  z-index: 999;
+}
+
+.iconV2:hover p {
+  min-width: 170px;
+  left: -140%;
+  z-index: 999;
+}
+
+.iconV3:hover p {
+  left: -10%;
+  z-index: 999;
+}
+
+.iconV4:hover p {
+  left: -30%;
+  z-index: 999;
+}
+
+.actionRow1 span {
+  cursor: pointer;
+}
+
+.actionRow1 small {
+  background-color: rgb(82, 173, 189);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.actionRow2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.reqBut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffff00bf;
+  color: black;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+
+/* .repbut {
+  background-color: #58e0e0;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  color: white;
+} */
+
+.repbut {
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+}
+.hold-but {
+  background-image: linear-gradient(
+    to right,
+    #ff6161 0%,
+    #c00b0b 51%,
+    green 100%
+  );
+}
+
+.con-but {
+  background-image: linear-gradient(
+    to right,
+    rgb(82, 82, 248) 0%,
+    rgb(235, 45, 76) 51%,
+    rgb(139, 6, 28) 100%
+  );
+}
+
+.repbut,
+.hold-but,
+.con-but {
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  display: block;
+  text-decoration: none;
+  width: 130px;
+}
+
+.repbut:hover,
+.hold-but:hover,
+.con-but:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.actionRow3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status {
+  max-width: 150px;
+  flex-grow: 2;
+}

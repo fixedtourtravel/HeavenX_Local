@@ -1,0 +1,136 @@
+.home {
+  flex-grow: 50;
+  margin: 20px;
+}
+
+.head {
+  background-color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgb(163, 162, 162);
+  margin-bottom: 20px;
+}
+
+.head a {
+  text-decoration: none;
+}
+
+.head a:hover {
+  color: orangered;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 650;
+  color: black;
+}
+
+.color_org {
+  color: orangered;
+}
+
+.profile {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.profileHeading {
+  margin-left: 20px;
+}
+
+.profilebody button {
+  float: right;
+}
+
+.profilebody h5 {
+  margin-top: 20px;
+}
+
+.radio {
+  margin-left: 20px;
+}
+
+.label {
+  margin-left: 45px;
+}
+
+.line {
+  height: 1px;
+  background-color: rgb(207, 204, 204);
+}
+
+.permission {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.permission h4 {
+  font-size: 32px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #5bdede;
+}
+
+.permission p {
+  font-size: 25px;
+  font-weight: 550;
+  margin-bottom: 0%;
+}
+
+.modal {
+  padding: 20px;
+  min-width: 70%;
+}
+
+.Logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img {
+  width: 150px;
+  height: auto;
+}
+
+.th {
+  color: black;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+}
+
+.profileItem {
+  margin-top: 20px;
+}
+
+.toogle {
+  float: right;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.username:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phone1 {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.phone2 {
+  flex-grow: 1;
+}

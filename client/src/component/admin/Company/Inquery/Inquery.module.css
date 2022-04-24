@@ -1,0 +1,50 @@
+.inquery {
+  box-shadow: 0px 0px 25px goldenrod;
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid goldenrod;
+  background-color: white;
+}
+
+.inquery h4 {
+  font-weight: 650;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px;
+}
+
+.btns button {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: goldenrod;
+  color: white;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btns button:hover {
+  background-color: rgb(165, 120, 6);
+}
+
+.th {
+  color: black;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+}
+
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

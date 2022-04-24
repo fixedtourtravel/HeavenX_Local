@@ -1,0 +1,6 @@
+.home {
+  padding: 20px;
+  margin: 20px;
+  flex-grow: 50;
+  flex-shrink: 50;
+}

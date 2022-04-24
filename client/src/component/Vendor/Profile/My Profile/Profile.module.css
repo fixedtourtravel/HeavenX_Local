@@ -1,0 +1,49 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.profileSection {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profileSectioninput {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textField {
+  margin-bottom: 20px;
+  width: 30%;
+}
+.addplace {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.addplace > button {
+  margin-top: 0px;
+  padding: 5px 20px 5px 20px;
+}
+
+.textinput {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.profileSectionButton {
+  margin-left: -35px;
+}
+
+.phoneNo {
+  width: 100%;
+}

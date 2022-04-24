@@ -1,0 +1,66 @@
+.sidebar {
+  padding: 20px;
+  margin: 20px;
+  min-width: fit-content;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-shadow: 0px 0px 20px rgb(189, 187, 187);
+}
+
+.sidebar > a {
+  text-decoration: none;
+}
+
+.sidebar a :hover {
+  color: orange;
+}
+
+.row {
+  display: flex;
+  margin: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.row div {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.colorblue {
+  color: aqua;
+  margin-right: 10px;
+}
+
+.subSetting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: -10px;
+}
+
+.subSetting a {
+  text-decoration: none;
+}
+
+.row1 {
+  margin-left: 40px;
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 17px;
+  margin-top: 5px;
+  color: black;
+
+}
+
+.row1:hover {
+  color: orange;
+}
+
+.active {
+  color: orange;
+}

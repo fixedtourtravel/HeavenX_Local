@@ -1,0 +1,147 @@
+.home {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px goldenrod;
+  margin-top: 50px;
+}
+
+.group {
+  padding: 20px;
+}
+
+.sort_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort_search > p {
+  font-size: 20px;
+  font-weight: 700;
+  color: orangered;
+}
+
+.coloryellow {
+  color: goldenrod;
+}
+
+.addGroup p {
+  margin-bottom: 0%;
+}
+
+.addGroup input {
+  width: 60%;
+  margin-right: 8%;
+  height: 37px;
+}
+
+.addGroup button {
+  margin-top: -1%;
+}
+
+.groupItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.groupItem p {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.groupname {
+  padding: 20px;
+  border-left: 2px solid goldenrod;
+}
+
+.groupname > p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.add p {
+  margin-bottom: 0%;
+}
+
+.add input {
+  width: 100%;
+  margin-right: 8%;
+  height: 37px;
+}
+
+.add button {
+  margin-left: -5%;
+}
+
+.th {
+  color: black;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+}
+
+.option {
+  background-color: pink;
+  position: absolute;
+  left: 65%;
+  padding: 10px;
+}
+
+.option > p {
+  margin-bottom: 0%;
+  font-weight: 700;
+}
+
+.contentDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(235, 230, 230);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 5;
+  flex-shrink: 5;
+}
+
+.menu div {
+  margin-right: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.active {
+  color: orangered;
+  font-weight: 650;
+}
+
+.contentEdit {
+  border: 1px solid black;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}

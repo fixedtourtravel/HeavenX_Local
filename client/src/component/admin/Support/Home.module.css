@@ -1,0 +1,29 @@
+.home {
+  min-width: 85%;
+  padding: 20px;
+}
+.head {
+  background-color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.head a {
+  text-decoration: none;
+}
+
+.head a:hover {
+  color: orangered;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 650;
+  color: black;
+}
+
+.color_org {
+  color: orangered;
+}

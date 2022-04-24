@@ -1,0 +1,70 @@
+.sidebar {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
+  min-width: fit-content;
+}
+
+.sidebar div {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px gray solid;
+  min-width: fit-content;
+}
+
+.name div {
+  min-width: fit-content;
+  cursor: pointer;
+}
+
+.profilepic {
+  position: relative;
+}
+
+.profilepic div {
+  min-width: fit-content;
+}
+
+.profilepic span {
+  display: none;
+  min-width: fit-content;
+}
+.profilepic:hover span {
+  display: block;
+  position: absolute;
+  top: -30%;
+  font-size: 12px;
+  text-align: center;
+  min-width: fit-content;
+}
+
+.side_menu {
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(248, 192, 50);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile:hover {
+  background-color: rgb(248, 203, 89);
+}

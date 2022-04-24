@@ -1,0 +1,18 @@
+.modal {
+  min-width: 100%;
+}
+
+.home {
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.Cancel {
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  font-size: 40px;
+  cursor: pointer;
+}

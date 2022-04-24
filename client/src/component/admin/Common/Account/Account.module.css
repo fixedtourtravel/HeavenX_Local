@@ -1,0 +1,46 @@
+.account {
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 25px goldenrod;
+  background-color: white;
+}
+.add {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.add div {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.add div p {
+  margin-bottom: 0px;
+}
+
+.addIcon {
+  cursor: pointer;
+}
+
+.coloryellow {
+  color: goldenrod;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.th {
+  color: black;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+}

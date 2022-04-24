@@ -1,0 +1,177 @@
+.booking_row {
+  display: flex;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 5px;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 250px;
+}
+
+.booking_img {
+  align-items: center;
+  background-color: #e44d3a;
+  width: 20%;
+  flex-grow: 0;
+}
+
+.booking_img img {
+  border-radius: 5px;
+}
+
+.booking_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-grow: 2;
+}
+
+.orderId,
+.place,
+.totalPerson {
+  margin-left: 20px;
+}
+
+.place {
+  font-size: 20px;
+}
+
+.orderId {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.totalPerson span {
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.totalPerson span > .MuiSvgIcon-root {
+  color: rgb(82, 173, 189);
+}
+
+.place strong {
+  font-size: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.startDate,
+.duration,
+.endDate {
+  font-weight: 550;
+}
+
+.startDate::after {
+  content: "";
+  border-left: 5px dotted rgb(82, 173, 189);
+  display: block;
+  height: 5px;
+  margin-left: 48%;
+  margin-bottom: 2px;
+}
+
+.endDate::before {
+  content: "";
+  border-bottom: 5px dotted rgb(82, 173, 189);
+  display: block;
+  width: 5px;
+  margin-left: 47.5%;
+  margin-top: 2px;
+}
+
+.duration::after,
+.duration::before {
+  content: "";
+  border-left: 2px dotted rgb(82, 173, 189);
+  display: block;
+  height: 15px;
+  margin-left: 50%;
+}
+
+.quot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.quotation {
+  width: 100%;
+  background-color: white;
+}
+
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.but div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quotation_Btn,
+.modify_Btn {
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  display: block;
+  text-decoration: none;
+  min-width: fit-content;
+}
+
+.quotation_Btn,
+.show {
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.show {
+  position: absolute;
+  font-size: 15px;
+  left: 88%;
+  top: -35%;
+  color: white;
+  padding: 3px 8px 3px 8px;
+  border-radius: 50%;
+}
+
+.notShow {
+  display: none;
+}
+
+.modify_Btn {
+  background-image: linear-gradient(
+    to right,
+    rgb(82, 82, 248) 0%,
+    rgb(235, 45, 76) 51%,
+    rgb(139, 6, 28) 100%
+  );
+}

@@ -1,0 +1,410 @@
+.home {
+  background-color: #58e0e0;
+  padding: 20px;
+}
+
+.body {
+  background-color: white;
+  margin: 40px;
+  padding: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading h2 {
+  color: #ff9f1c;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.query {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.id {
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100%;
+}
+
+.destination,
+.destination1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.destination1 {
+  max-width: 80%;
+}
+
+.des {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  background-color: #ff9f1c;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  max-width: 130px;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-right: none;
+}
+
+.table {
+  flex-grow: 100;
+  flex-shrink: 100;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.th {
+  color: black;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+  position: relative;
+}
+
+td p {
+  color: black;
+  text-align: center;
+  margin-top: 0;
+}
+
+.td input,
+.td select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+.td div {
+  margin-top: -10%;
+  background-color: #ff9f1c;
+}
+
+.td select {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+}
+
+.tr {
+  line-height: 37px;
+  min-height: 37px;
+  height: 37px;
+}
+
+.trh {
+  background-color: #58e0e0;
+  border: 1px solid black;
+}
+
+.tr input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.005);
+}
+
+/* input[type="date"],
+input[type="text"],
+input[type="number"],
+select {
+  outline: none;
+}
+
+select {
+  border: none;
+} */
+
+.resDetail {
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.resName {
+  background-color: #58e0e0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+}
+
+.row {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resRow1 {
+  flex-grow: 2;
+  flex-shrink: 2;
+  margin-right: 10px;
+}
+
+.resRow2 {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.resCol {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.resCol1 {
+  flex-grow: 2;
+  max-width: 150px;
+  min-width: 150px;
+}
+
+.resCol2 {
+  flex-grow: 0.1;
+  flex-shrink: 0.1;
+}
+.resCol3 {
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+.resCol3 strong {
+  min-width: 20px;
+}
+
+.resCol3 input {
+  min-width: 100%;
+  font-weight: 650;
+  border: none;
+}
+
+.flightRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.inclusion {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  min-width: 100%;
+}
+
+.content input {
+  min-width: 90%;
+  margin-left: 20px;
+  border: none;
+}
+
+.itinerary {
+  margin-top: 20px;
+}
+
+.itinerary h4 {
+  text-align: center;
+}
+
+.itineraryRow1,
+.itineraryRow2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.itineraryRow1 {
+  background-color: #58e0e0;
+  font-weight: 650;
+}
+
+.itineraryother {
+  text-align: center;
+}
+
+.itineraryDetail {
+  text-align: center;
+}
+
+.itineraryDetail input,
+.itineraryother input {
+  text-align: center;
+  min-width: 100%;
+  border: none;
+}
+
+.itineraryBut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.costName {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: #ff9f1c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.costRow {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+
+.costCol1 {
+  flex-grow: 500;
+  flex-shrink: 1;
+  border: none;
+  border-left: 1px solid black;
+  max-height: 160px;
+}
+
+.costCol2 {
+  flex-grow: 1;
+  flex-shrink: 10;
+  align-items: center;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.costCol2name {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ff9f1c;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.cal button {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff9f1c;
+  padding: 2px;
+  margin-top: 2%;
+  border-top: 1px solid black;
+}
+
+.cal1 button {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff9f1c;
+  padding: 2px;
+  border-top: 1px solid black;
+  margin-top: -2%;
+}
+
+.trh1 {
+  background-color: #ff9f1c;
+}
+
+.costCol2 > input {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 25px;
+  font-weight: 700;
+  color: gray;
+  margin-top: 2.7%;
+  margin-bottom: 2.7%;
+  border: none;
+}
+
+.othername {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+  margin-top: -13px;
+  flex-grow: 2;
+}
+
+.textarea {
+  flex-grow: 4;
+}
+
+.othercost {
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-top: none;
+}
+
+.othercostRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.othercostRow input {
+  flex-grow: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.othercostRow1 {
+  max-width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.othercostRow1 input {
+  max-width: 50%;
+  text-align: center;
+}
+
+.othercostRowinput {
+  border-left: 1px solid black;
+}
+
+.but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.costCol12 {
+  display: flex;
+  justify-content: space-between;
+}

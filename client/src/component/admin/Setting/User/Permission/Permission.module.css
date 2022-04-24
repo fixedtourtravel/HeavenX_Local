@@ -1,0 +1,70 @@
+.permission {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.permission h4 {
+  font-size: 32px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #5bdede;
+}
+
+.permission p {
+  font-size: 25px;
+  font-weight: 550;
+  margin-bottom: 0%;
+}
+
+.permissioninput {
+  width: 30%;
+}
+
+.radioDiv {
+  margin-top: 20px;
+  border: 2px solid #5bdede;
+  overflow-x: hidden;
+}
+
+.radioHeading1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 10px;
+  padding: 20px;
+  border-bottom: 2px solid rgba(91, 222, 222, 0.53);
+  border-right: 2px solid rgba(91, 222, 222, 0.53);
+}
+
+.radioHeading2 {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px;
+  border-bottom: 2px solid rgba(91, 222, 222, 0.53);
+  border-right: 2px solid rgba(91, 222, 222, 0.53);
+}
+
+.radioname {
+  margin-left: 10px;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 2px solid rgba(91, 222, 222, 0.53);
+  border-right: 2px solid rgba(91, 222, 222, 0.53);
+}
+
+.radioname1 {
+  padding: 10px 20px 10px 20px;
+  border-bottom: 2px solid rgba(91, 222, 222, 0.53);
+  border-right: 2px solid rgba(91, 222, 222, 0.53);
+}
+
+.radio {
+  margin: 10px;
+}
+
+.label {
+  margin: 5px;
+  margin-left: 35px;
+}
+
+.permission input {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,86 @@
+.headnav {
+  min-height: 80px;
+  max-height: 80px;
+  align-items: center;
+  box-shadow: 0 0 27px rgb(211, 209, 209);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 3;
+  margin-left: 20px;
+}
+
+.nav-left img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 2;
+  margin-right: 20px;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.title-name {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.search,
+.username,
+.inquery,
+.order,
+.dropdown {
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+}
+
+.inquery:hover,
+.order:hover {
+  color: #e44d3a;
+}
+
+.drop div {
+  margin: auto;
+  margin-top: -16%;
+  margin-left: -10%;
+}
+
+.search > .MuiSvgIcon-root {
+  font-size: 30px;
+}
+
+.nav-dropdownToggle {
+  background-color: #e44d3a;
+  border: none;
+  text-align: center;
+}
+
+.nav-dropdownToggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-dropdownToggle :hover {
+  background-color: rgb(252, 106, 53);
+  border: none;
+}
+
+.nav-dropdownToggle > .MuiSvgIcon-root {
+  font-size: 30px;
+  color: white;
+}

@@ -1,0 +1,83 @@
+.home {
+  margin: 20px;
+  padding: 20px;
+  flex-grow: 50;
+}
+
+.head {
+  background-color: white;
+  min-width: 100%;
+  padding: 10px;
+  box-shadow: 0px 0px 20px rgb(189, 187, 187);
+  font-size: 23px;
+  font-weight: 650;
+  border-radius: 5px;
+}
+
+.body {
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgb(228, 227, 227);
+  padding: 20px;
+}
+
+.body p {
+  font-size: 18px;
+}
+
+.body input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.company,
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phone1 {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.phone2 {
+  flex-grow: 1;
+}
+
+.comLogo {
+  flex-grow: 4;
+  margin-right: 20px;
+}
+
+.compre {
+  flex-grow: 1;
+  max-height: 100px;
+}
+
+.country div {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.button {
+  margin-left: 90%;
+  background-color: orange;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}

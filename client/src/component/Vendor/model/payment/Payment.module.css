@@ -1,0 +1,106 @@
+.modalTitle {
+  color: #58e0e0;
+  font-weight: 620;
+  margin-left: 20px;
+}
+
+.modal {
+  min-width: 70%;
+}
+
+.modal i,
+.modal1 i {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  font-size: 40px;
+  cursor: pointer;
+}
+.modal div,
+.modal1 div {
+  margin: 20px;
+}
+
+.modal div h5 {
+  margin-left: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  margin: 0%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.trh {
+  background-color: #58e0e0;
+  text-align: center;
+}
+
+.td {
+  text-align: center;
+  position: relative;
+}
+
+.td input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+.td input:focus {
+  border: none;
+}
+
+.payment_btn {
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  display: block;
+  text-decoration: none;
+  min-width: fit-content;
+}
+
+.payment_btn {
+  background-image: linear-gradient(
+    to right,
+    #22d6ff 0%,
+    #0a6daa 51%,
+    #073ac6 100%
+  );
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.details label {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.buttons1 button {
+  margin: 0%;
+  margin-left: -20px;
+  margin-right: 40px;
+}

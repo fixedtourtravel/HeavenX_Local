@@ -1,0 +1,32 @@
+.footer{
+    background-color: #efeecf;
+    padding: 20px 0px 30px 0px;
+    overflow-x: hidden;
+}
+
+.row-padding{
+    padding: 10px 30px 10px 30px;
+}
+.footer-social-text{
+    font-size: 2rem !important;
+}
+.footer-social{
+    font-size: 2rem !important;
+}
+.footer-social:hover{
+    transform: scale(1.25);
+}
+.line{
+    background-color: #cbcaae;
+    height: 1px;
+    width: 100%;
+}
+
+.footer-registration-btn{
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #22bfba;
+    border: none;
+    color: black;
+}

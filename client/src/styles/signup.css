@@ -1,0 +1,120 @@
+.signupPage {
+  min-height: 85vh;
+  overflow-y: auto;
+  background-color: #b0f4d7;
+  position: relative;
+}
+.signup-Logo {
+  position: absolute;
+  left: 120px;
+  top: 16%;
+  z-index: 10;
+  height: 600px;
+  width: auto;
+}
+.signupBox {
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  max-height: 130vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 50px 0px 0px 50px;
+  padding: 90px 200px 50px 225px;
+}
+
+.signupMenuBar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.signup-Header {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.signupMenu-OR {
+  font-size: 32px;
+  color: #a6a6a6;
+}
+
+.signupMenu-btn {
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  border: 1px solid #cdcaca;
+  transition: all 250ms ease-in-out;
+}
+
+.signupMenu-btn.active {
+  background-color: #ddffe9;
+  border: 1px solid white;
+}
+
+.signup-btn {
+  background-color: #6fc990 !important;
+  font-size: 24px !important;
+  text-transform: none !important;
+  width: 80%;
+  border-radius: 10px !important;
+}
+
+.signup-btn:focus {
+  outline: none !important;
+}
+
+.signup-login-text {
+  font-size: 22px;
+  font-weight: 300;
+}
+.signup-login-link {
+  text-decoration: none !important;
+  color: #00c2cb;
+  font-weight: 500;
+}
+.signup-login-link:hover {
+  color: #059ea7;
+}
+
+.password-visibility-icon {
+  font-size: 36px !important;
+  position: relative !important;
+  top: -2px !important;
+}
+
+.verifyemail {
+  background-image: url("./loginbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.verifyemail-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+.verifyemail-content h2 {
+  margin-bottom: 30px;
+}
+
+.verifyemail-content button {
+  font-size: 22px;
+  font-weight: 650;
+  margin-top: -5px;
+}
+
+.verifyemail-content input {
+  padding: 10px 20px 10px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}

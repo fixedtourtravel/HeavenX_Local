@@ -1,0 +1,60 @@
+.modalTitle {
+  color: orange;
+  font-weight: 620;
+}
+
+.modal {
+  min-width: 25%;
+}
+
+.modal i {
+  position: absolute;
+  right: -10%;
+  top: -15%;
+  font-size: 40px;
+  cursor: pointer;
+}
+.modal div {
+  margin: 7%;
+}
+
+.modal div small {
+  font-size: 13.5px;
+}
+
+.modal div p {
+  font-weight: 600;
+}
+
+.modal div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal div p {
+  color: gray;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 0%;
+}
+
+.modal div select {
+  -webkit-appearance: media-fullscreen-button;
+  height: 40px;
+  width: 70%;
+  margin-right: 3%;
+  padding-left: 10px;
+}
+
+.modal div button {
+  max-width: 40%;
+  text-align: center;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 30%;
+  padding: 10px;
+}

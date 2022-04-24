@@ -1,0 +1,48 @@
+.modal {
+  min-width: 25%;
+  text-align: center;
+}
+.modal i {
+  position: absolute;
+  right: -10%;
+  top: -15%;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal div {
+  margin: 7%;
+}
+
+.modal div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.modal div input {
+  width: 70%;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(187, 185, 185);
+}
+
+.modal div span input {
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.modal div button {
+  max-width: 40%;
+  text-align: center;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+}

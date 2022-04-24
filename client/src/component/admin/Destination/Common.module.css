@@ -1,0 +1,204 @@
+.home {
+  background-color: white;
+  min-width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px goldenrod;
+  margin: 20px;
+  max-height: 120vh;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+
+.headItem {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.headItemName {
+  font-weight: 600;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.addIcon {
+  cursor: pointer;
+}
+
+.coloryellow {
+  color: goldenrod;
+}
+
+.add p,
+.addStation p,
+.addcountry p {
+  margin-bottom: 0%;
+}
+
+.add input {
+  margin-top: 0;
+  width: 20%;
+  margin-right: 20px;
+  height: 37px;
+  border: 1px solid black;
+}
+
+.addcountry input {
+  margin-top: 0%;
+  width: 50%;
+  margin-right: 20px;
+  height: 37px;
+}
+
+.add button,
+.addStation button,
+.addcountry button {
+  margin-top: -0.5%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.addStation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addStation {
+  margin-left: 10px;
+}
+
+.addStation select {
+  width: 25%;
+  padding: 5px;
+}
+
+.addStation input {
+  width: 25%;
+  padding: 5px;
+}
+
+.content {
+  min-height: 70vh;
+  max-height: 70vh;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+
+.contentcity {
+  padding: 20px;
+  max-height: 170px;
+  overflow-y: scroll;
+  margin-top: 20px;
+}
+
+.contentDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(235, 230, 230);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 5;
+  flex-shrink: 5;
+}
+
+.menu div {
+  margin-right: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.homeCountry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.country {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 10px;
+}
+
+.city {
+  flex-grow: 2;
+  flex-shrink: 2;
+  padding: 10px;
+  border-left: 1px aqua solid;
+  height: 80vh;
+}
+
+.active {
+  color: orangered;
+  font-weight: 650;
+}
+
+.contentEdit {
+  border: 1px solid black;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.modal {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal input {
+  margin: 20px;
+  width: 90%;
+  margin-bottom: 0;
+}
+
+.modal button {
+  margin-bottom: 20px;
+  width: 40%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sort_search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort_select {
+  margin-right: 20px;
+  margin-left: 10px;
+  border: 1px solid black;
+  width: fit-content;
+}
+
+.search {
+  border: 1px solid black;
+  max-width: 40%;
+}
