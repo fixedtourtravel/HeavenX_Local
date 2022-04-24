@@ -2016,7 +2016,7 @@ function Reply() {
             );
           })}
         </div>
-        <div className={style.resDetail}>
+        {/* <div className={style.resDetail}>
           <div className={style.resName}>Flight Details :</div>
           <div className={style.flightRow}>
             <span>Indigo</span>
@@ -2026,7 +2026,7 @@ function Reply() {
             <span>00.20</span>
             <span>00.20</span>
           </div>
-        </div>
+        </div> */}
         <div className={style.resDetail}>
           <div className={style.resName}>Inclusion</div>
           <div className={style.inclusion}>
