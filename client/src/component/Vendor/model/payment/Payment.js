@@ -58,6 +58,7 @@ function Payment({
       )
       .then((res) => {
         alert(res.data.message);
+        setDisable(true);
         if (status) {
           status(res.data.data);
         }

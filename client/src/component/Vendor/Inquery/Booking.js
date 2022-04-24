@@ -19,6 +19,7 @@ import guest1 from "../../../image/guest-list.svg";
 import GuestDetails from "../../client/modals/GuestDetail/GuestDetails";
 import Image from "./Image";
 import Payment from "../model/payment/Payment";
+import Confirm from "../model/Confirm/Confirm";
 
 // import guest from "../../../image/guests.png";
 
@@ -220,7 +221,11 @@ function Booking({ data, status, updateHandler }) {
             vendorId={auth.user._id}
             comp="vender"
           ></Hold>
-          <button className="con-but">Confirm</button>
+          <Confirm
+            queryId={data._id}
+            venderId={auth.user._id}
+            status={setStatus}
+          />
         </div>
         <div className="actionRow3">
           <span className="iconV icon iconV2" onClick={handleGuest}>

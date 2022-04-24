@@ -1,0 +1,23 @@
+.modal {
+  min-width: 25%;
+}
+
+.modal i {
+  position: absolute;
+  right: -10%;
+  top: -15%;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal div {
+  margin: 7%;
+}
+
+
+.modal div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+

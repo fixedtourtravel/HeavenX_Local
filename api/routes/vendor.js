@@ -22,7 +22,8 @@ router.get("/order", isLoggedIn, async (req, res) => {
       let query = await Query.findById(inquery[i].queryId);
       (query.hold = inquery[i].hold),
         (query.cancel = inquery[i].cancel),
-        (query.confirm = inquery[i].confirm),
+        (query.client_confirm = inquery[i].client_confirm),
+        (query.vender_confirm = inquery[i].vender_confirm),
         (query.payment = inquery[i].payment);
       ans.push({ query: query, status: inquery[i].status });
     }
@@ -46,16 +47,20 @@ router.post("/holdquery", async (req, res) => {
     const query = await Query.findById(req.body.queryId);
     query.hold = true;
     query.cancel = false;
-    query.confirm = false;
-    query.payment = false;
+    query.client_confirm = false;
+    query.vender_confirm = false;
     query.save();
+
     let list = user.inquery;
-    console.log(list, req.body);
+    // console.log(list, req.body);
     for (let i = 0; i < list.length; i++) {
+      console.log(list[i].queryId, req.body.queryId);
       if (list[i].queryId == req.body.queryId) {
         user.inquery[i].hold = true;
         user.inquery[i].cancel = false;
-        user.inquery[i].confirm = false;
+        user.inquery[i].vender_confirm = false;
+        user.inquery[i].client_confirm = false;
+        user.inquery[i].payment = false;
         user.inquery[i].status.push(
           `Hold (${req.body.holdDate} ${req.body.holdHour}:${req.body.holdMin} Hrs)`
         );
@@ -63,7 +68,6 @@ router.post("/holdquery", async (req, res) => {
       }
     }
     user.save();
-
     const invoicehistory = await InvoiceHistory.findOne({
       vendorId: req.body.vendorId,
       queryId: req.body.queryId,
@@ -80,7 +84,6 @@ router.post("/holdquery", async (req, res) => {
       message: "Query Hold",
       data: `Hold (${req.body.holdDate} ${req.body.holdHour}:${req.body.holdMin} Hrs)`,
     });
-    //console.log(user.inquery);
   } catch (err) {
     console.log("Error in vendor.js in /holdquery", err);
   }
@@ -95,7 +98,8 @@ router.post("/cancelquery", isLoggedIn, async (req, res) => {
       if (list[i].queryId == req.body.queryId) {
         user.inquery[i].cancel = true;
         user.inquery[i].hold = false;
-        user.inquery[i].confirm = false;
+        user.inquery[i].client_confirm = false;
+        user.inquery[i].vender_confirm = false;
         user.inquery[i].status.push("Cancelled");
       }
     }
@@ -115,26 +119,6 @@ router.post("/cancelquery", isLoggedIn, async (req, res) => {
     res.send({ success: true, message: "Cancelled" });
   } catch (err) {
     console.log("Error in vendor.js in /cancelquery", err);
-  }
-});
-
-router.post("/confirmquery", isLoggedIn, async (req, res) => {
-  try {
-    const user = await User.findById(req.user.id);
-    let list = user.inquery;
-    for (let i = 0; i < list.length; i++) {
-      console.log("req.body.orderId", req.body.orderId, list[i].queryOrderId);
-      if (list[i].queryOrderId == req.body.orderId) {
-        console.log("user.inquery[i].hold", user.inquery[i].hold);
-        user.inquery[i].confirm = true;
-        user.inquery[i].cancel = false;
-        user.inquery[i].hold = false;
-      }
-    }
-    user.save();
-    console.log(user.inquery);
-  } catch (err) {
-    console.log("Error in vendor.js in /confirmquery", err);
   }
 });
 
@@ -669,7 +653,8 @@ router.post("/requestPayment", async (req, res) => {
     const query = await Query.findById(queryId);
     query.hold = false;
     query.cancel = false;
-    query.confirm = false;
+    query.client_confirm = false;
+    query.vender_confirm = false;
     query.payment = payment;
     query.save();
     let list = user.inquery;
@@ -677,7 +662,8 @@ router.post("/requestPayment", async (req, res) => {
       if (list[i].queryId == queryId) {
         user.inquery[i].hold = false;
         user.inquery[i].cancel = false;
-        user.inquery[i].confirm = false;
+        user.inquery[i].client_confirm = false;
+        user.inquery[i].vender_confirm = false;
         user.inquery[i].payment = false;
         user.inquery[i].status.push(`Payment Requested`);
         break;
@@ -704,6 +690,51 @@ router.post("/requestPayment", async (req, res) => {
     //console.log(user.inquery);
   } catch (err) {
     console.log("Error in vendor.js in /requestPayment", err);
+  }
+});
+
+router.post("/VenderConfirm", async (req, res) => {
+  try {
+    const { venderId, queryId } = req.body;
+    console.log(venderId, queryId);
+    const user = await User.findById(venderId);
+    const query = await Query.findById(queryId);
+    query.hold = false;
+    query.cancel = false;
+    query.client_confirm = false;
+    query.vender_confirm = true;
+    query.save();
+
+    let list = user.inquery;
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].queryId == queryId) {
+        list[i].hold = false;
+        list[i].cancel = false;
+        list[i].client_confirm = false;
+        list[i].vender_confirm = true;
+        list[i].payment = false;
+        list[i].status.push(`Vender Confirmed`);
+        break;
+      }
+    }
+    user.save();
+
+    const invoicehistory = await InvoiceHistory.findOne({
+      vendorId: venderId,
+      queryId: queryId,
+    });
+
+    const history = invoicehistory.history;
+    const invoice = await Invoice.findById(history[history.length - 1]);
+    invoice.clientStatus.push(`Vender Confirmed`);
+    invoice.save();
+    res.send({
+      success: true,
+      message: "Vender Confirmed",
+    });
+    //console.log(user.inquery);
+  } catch (err) {
+    console.log("Error in vendor.js in /VenderConfirm", err);
   }
 });
 

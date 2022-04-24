@@ -17,7 +17,11 @@ const QueryRefSchema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  confirm: {
+  client_confirm: {
+    type: Boolean,
+    default: false,
+  },
+  vender_confirm: {
     type: Boolean,
     default: false,
   },
