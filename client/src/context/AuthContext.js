@@ -2,6 +2,8 @@ import React, { useContext, createContext, useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import axios from "axios";
 import { TOKEN_ID } from "../utils/constants";
+import * as ROUTES from "../constants/routes";
+
 const AuthContext = createContext(null);
 
 export const useAuth = () => {
@@ -14,18 +16,15 @@ export default function AuthProvider({ children }) {
   const location = useLocation();
 
   const GetTokenSetUser = () => {
-    console.log(location);
     let tokenid = localStorage.getItem(TOKEN_ID);
 
     if (tokenid && !user) {
-      console.log("get user");
+      history.push(location);
       axios({
         method: "get",
-        url: `http://localhost:5000/api/auth/user/${tokenid}`,
+        url: `${ROUTES.BASELINK}/api/auth/user/${tokenid}`,
       }).then((result) => {
         if (result.data.success) {
-          console.log("success got user");
-          console.log(result.data.data);
           setUser(result.data.data);
           history.push(location);
         } else {
@@ -37,13 +36,11 @@ export default function AuthProvider({ children }) {
 
   useEffect(() => {
     if (!user) {
-      console.log("----");
       GetTokenSetUser();
     }
   }, []);
 
   const login = (user, jwttoken) => {
-    console.log("in login auth");
     setUser(user);
     localStorage.setItem(TOKEN_ID, jwttoken);
   };

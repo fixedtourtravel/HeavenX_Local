@@ -1239,17 +1239,41 @@ router.get("/getQuery", async (req, res) => {
 
 router.get("/getReply", async (req, res) => {
   try {
-    let data = [];
-    const invoiceHistory = await InvoiceHistory.find();
-    for (let i = 0; i < invoiceHistory.length; i++) {
-      let history = invoiceHistory[i].history;
-      const invoice = await Invoice.findById(history[history.length - 1]);
-      data.push(invoice);
+    let client_confirm = [],
+      vender_confirm = [],
+      hold = [],
+      cancel = [],
+      all = [];
+
+    const user = await User.find();
+    for (let i = 0; i < user.length; i++) {
+      if (user[i].role == "supplier") {
+        let inq = user[i].inquery;
+        for (let j = 0; j < inq.length; j++) {
+          let invoiceHistory = await InvoiceHistory.findOne({
+            vendorId: user[i]._id,
+            queryId: inq[j].queryId,
+          });
+
+          let history = invoiceHistory.history;
+
+          const invoice = await Invoice.findById(history[history.length - 1]);
+          if (inq[j].client_confirm) {
+            client_confirm.push(invoice);
+          } else if (inq[j].vender_confirm) {
+            vender_confirm.push(invoice);
+          } else if (inq[j].cancel) {
+            cancel.push(invoice);
+          } else {
+            hold.push(invoice);
+          }
+          all.push(invoice);
+        }
+      }
     }
-    console.log(data);
     return res.send({
       success: true,
-      data: data,
+      data: { all, client_confirm, vender_confirm, cancel, hold },
     });
   } catch (err) {
     console.log("error in admin.js in /getReply", err);

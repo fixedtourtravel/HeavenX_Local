@@ -122,7 +122,6 @@ function Home() {
       var lastDay = new Date(y, mo + i + 1, 0);
       firstDay = moment(firstDay).format("YYYY-MM-DD");
       lastDay = moment(lastDay).format("YYYY-MM-DD");
-      console.log(firstDay, lastDay);
       var mon = mo + i;
       if (mon < 0) {
         mon += 12;
@@ -160,7 +159,6 @@ function Home() {
         color: x1,
       });
     }
-    console.log(threeMonth);
     setMonth(threeMonth);
   };
 

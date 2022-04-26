@@ -4,7 +4,7 @@ import style from "./Inquery.module.css";
 
 function Card({ data }) {
   const [nights, setNights] = useState([]);
-
+ console.log(data)
   const calNight = () => {
     let nig = [];
     for (let i = 0; i < data.length; i++) {
@@ -40,13 +40,13 @@ function Card({ data }) {
             {/* <th className={style.th}>Action</th> */}
           </tr>
         </thead>
-        {data.map((info, i) => {
+        {data && data.map((info, i) => {
           return (
             <tbody>
               <tr style={{ backgroundColor: "white" }}>
                 <td className={style.td}>{i + 1}</td>
                 <td className={style.td}>{info.queryNo}</td>
-                <td className={style.td}>{info.vendorId}</td>
+                <td className={style.td}>{info.vendorCode}</td>
                 <td className={style.td}>{info.queryCountry}</td>
                 <td className={style.td}>
                   <div className={style.city}>

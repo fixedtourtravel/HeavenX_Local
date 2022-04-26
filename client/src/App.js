@@ -110,27 +110,27 @@ function App() {
                 path={ROUTES.ADMINHOME}
                 component={() => <AdminHome />}
               />
-              <Route
+              <PrivateRoute
                 exact={true}
                 path={ROUTES.REPLY_CLIENT}
                 component={() => <Reply />}
               />
-              <Route
+              <PrivateRoute
                 exact={true}
                 path={ROUTES.REPLY_VENDER}
                 component={() => <Reply />}
               />
-              <Route
+              <PrivateRoute
                 exact={true}
                 path={ROUTES.VOUCHER}
                 component={() => <Voucher />}
               />
-              <Route
+              <PrivateRoute
                 exact={true}
                 path={ROUTES.INVOICE_VENDER}
                 component={() => <Invoice />}
               />
-              <Route
+              <PrivateRoute
                 exact={true}
                 path={ROUTES.INVOICE_CLIENT}
                 component={() => <Invoice />}

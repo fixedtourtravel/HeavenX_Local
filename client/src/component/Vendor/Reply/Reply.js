@@ -119,6 +119,9 @@ function Reply() {
   const [ClientfinalCost, setClientfinalCost] = useState();
   const [vendorCode, setvendorCode] = useState();
 
+  const [detail, setdetail] = useState([]);
+  const [instruction, setinstruction] = useState([]);
+
   const { user_role, queryId, vendorId } = useParams();
 
   const getReplyDetails = async () => {
@@ -159,6 +162,23 @@ function Reply() {
     setLoading(false);
   };
 
+  const initialTax = (detail) => {
+    console.log("initial ta", Tax);
+    let dest = detail.destination;
+    let t = [];
+    for (let i = 0; i < Tax.length; i++) {
+      let c = Tax[i].country;
+      for (let j = 0; j < c.length; j++) {
+        if (c[j].label.toUpperCase() === dest[0].country.toUpperCase()) {
+          t.push(Tax[i]);
+          break;
+        }
+      }
+    }
+    setcurrTax(t);
+    console.log("my tax is", t);
+  };
+
   const initialValues = (detail, instruction) => {
     if (detail.destination) {
       setDestination(detail.destination);
@@ -174,17 +194,7 @@ function Reply() {
         }
       }
       setAllCity(city);
-      let t = [];
-      for (let i = 0; i < Tax.length; i++) {
-        let c = Tax[i].country;
-        for (let j = 0; j < c.length; j++) {
-          if (c[j].label.toUpperCase() === dest[0].country.toUpperCase()) {
-            t.push(Tax[i]);
-            break;
-          }
-        }
-      }
-      setcurrTax(t);
+      initialTax(detail.destination);
     }
 
     if (detail.CostDetail) {
@@ -1094,7 +1104,6 @@ function Reply() {
   const calculateClientCost = () => {
     let sC, dC, tC, eC, cC, CnC, iC;
     let com = parseInt(commission);
-    console.log("com", com);
     sC = parseInt(singlecost) + (parseInt(singlecost) * com) / 100;
     dC = parseInt(doublecost) + (parseInt(doublecost) * com) / 100;
     tC = parseInt(triplecost) + (parseInt(triplecost) * com) / 100;
@@ -1117,7 +1126,6 @@ function Reply() {
     grcost += parseInt(otherChargeCost);
     grcost = grcost + (grcost * parseInt(taxper)) / 100;
     setClientfinalCost(grcost);
-    console.log("grcost", grcost);
   };
 
   const handleSend = async () => {
@@ -1266,6 +1274,17 @@ function Reply() {
     settotalPassenger(pass);
   };
 
+  const handleTax = (value) => {
+    settax(value);
+    for (let i = 0; i < currTax.length; i++) {
+      if (currTax[i].name === value) {
+        settaxper(currTax[i].percentage);
+        calculateTotalCost();
+        break;
+      }
+    }
+  };
+
   useEffect(() => {
     getReplyDetails();
   }, []);
@@ -1292,6 +1311,11 @@ function Reply() {
     taxper,
     commission,
   ]);
+
+  useEffect(() => {
+    initialTax(details);
+  }, [details, Tax]);
+
   return (
     <div className={style.home}>
       {<Loading Loading={loading} />}
@@ -2671,14 +2695,7 @@ function Reply() {
                     placeholder="Tax Name"
                     value={tax}
                     onChange={(e) => {
-                      settax(e.target.value);
-                      for (let i = 0; i < currTax.length; i++) {
-                        if (currTax[i].name === e.target.value) {
-                          settaxper(currTax[i].percentage);
-                          calculateTotalCost();
-                          break;
-                        }
-                      }
+                      handleTax(e.target.value);
                     }}
                     disabled={user_role === "client"}
                     style={{

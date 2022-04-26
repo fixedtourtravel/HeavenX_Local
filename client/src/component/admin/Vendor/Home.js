@@ -26,7 +26,6 @@ function Home() {
         if (res.data.data.length === 0) {
           return;
         }
-        console.log("res.data.data", res.data.data);
         setData(res.data.data);
       })
       .catch((err) => {
@@ -41,7 +40,6 @@ function Home() {
       })
       .then(
         (res) => {
-          console.log(res.data.data);
           setAllGroup(res.data.data);
         },
         (error) => {
@@ -60,10 +58,11 @@ function Home() {
       },
     })
       .then((res) => {
+        console.log("res.data.data", res.data.data);
+
         if (res.data.data.length === 0) {
           return;
         }
-        console.log("res.data.data", res.data.data);
         setreply(res.data.data);
       })
       .catch((err) => {
