@@ -16,11 +16,39 @@ const emailToken = async (token, receiver, purpose) => {
     }<p>Regards,<br>IqApex </p>`;
 
     // for now this works http://localhost:5000/api/auth/verifyemail/token
-    const output2 = `<p>Hello ${
-      receiver.username
-    }</p>Link for email verification:<a href ="http://localhost:3000/verifyemail/${token}"> <button>Verify</button></a> <p>${
-      receiver.role != "client" ? `Your code is ${receiver.uniqueCode}` : ""
-    }</p><p>Regards,<br>IqApex</p>`;
+    const output2 = `<p>Hi  ${receiver.username}
+    <br>
+    <br>
+   ${
+     receiver.role == "supplier"
+       ? `Company Name : ${receiver.companyInfo.companyName}
+    <br>
+    Email Id : ${receiver.emailId}
+    <br>
+    Mobile No : ${receiver.mobileNo}
+    <br>
+    <br>
+    Thank You for your login to <a href ="http://localhost:3000"> fixedtour.com</a>
+    <br>`
+       : ""
+   }
+    We hope  you had a good experience ! We always keep improving the services we offer. Our highest priority is to ensure that these services meet your expectations.
+    <br>
+    ${
+      receiver.role != "client"
+        ? `Your code is <strong> ${receiver.uniqueCode} </strong>  <br>`
+        : ""
+    }
+    <br>
+    Click on <a href ="http://localhost:3000/verifyemail/${token}">Verify Email</a>
+    <br>
+    <br>
+    Thank You for your time !
+    <br>
+    <br>
+    Team 
+    <br>
+    <a href ="http://localhost:3000"> fixedtour.com</a>`;
 
     let output;
     let subject;

@@ -70,9 +70,6 @@ const UserSchema = mongoose.Schema(
     role: {
       type: String,
     },
-    company: {
-      type: String,
-    },
     mobileNo: {
       type: String,
     },

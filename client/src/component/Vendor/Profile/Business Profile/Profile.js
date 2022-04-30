@@ -273,6 +273,7 @@ function Profile({ closeButton, user, updateHandler }) {
               readOnly={
                 disable &&
                 user.companyInfo &&
+                user.companyInfo.businessName &&
                 user.companyInfo.businessName !== ""
               }
               className="query-Input"
@@ -299,6 +300,7 @@ function Profile({ closeButton, user, updateHandler }) {
               readOnly={
                 disable &&
                 user.companyInfo &&
+                user.companyInfo.companyName &&
                 user.companyInfo.companyName !== ""
               }
               className="query-Input"
@@ -326,6 +328,7 @@ function Profile({ closeButton, user, updateHandler }) {
               disabled={
                 disable &&
                 user.companyInfo &&
+                user.companyInfo.businessType &&
                 user.companyInfo.businessType !== ""
               }
               className="query-Input"
@@ -401,7 +404,10 @@ function Profile({ closeButton, user, updateHandler }) {
             </Label>
             <Input
               readOnly={
-                disable && user.companyInfo && user.companyInfo.address !== ""
+                disable &&
+                user.companyInfo &&
+                user.companyInfo.address &&
+                user.companyInfo.address !== ""
               }
               className="query-Input"
               onChange={(e) => setaddress(e.target.value)}
@@ -558,7 +564,10 @@ function Profile({ closeButton, user, updateHandler }) {
             </Label>
             <Input
               readOnly={
-                disable && user.companyInfo && user.companyInfo.landMark !== ""
+                disable &&
+                user.companyInfo &&
+                user.companyInfo.landMark &&
+                user.companyInfo.landMark !== ""
               }
               className="query-Input"
               onChange={(e) => setlandMark(e.target.value)}

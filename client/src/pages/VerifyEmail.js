@@ -1,5 +1,4 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import React, { useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import * as ROUTES from "../constants/routes";
@@ -8,7 +7,7 @@ import Loading from "./Loading";
 function VerifyEmail() {
   const [loading, setloading] = React.useState(false);
   const { token } = useParams();
-  console.log("token", token);
+
   const history = useHistory();
   const handleVerify = async () => {
     setloading(true);
@@ -30,6 +29,10 @@ function VerifyEmail() {
     setloading(false);
   };
 
+  useEffect(() => {
+    handleVerify();
+  }, []);
+
   return (
     <div className="verifyemail">
       <Loading Loading={loading} />
@@ -40,13 +43,6 @@ function VerifyEmail() {
         width="200px"
         height="200px"
       />
-      <div className="verifyemail-content">
-        <h2>Please verify your account</h2>
-        <Button variant="danger" onClick={handleVerify}>
-          Verify
-        </Button>
-      </div>
-      <img className="plane1" src="/images/plane.svg" alt="Plane" />
     </div>
   );
 }

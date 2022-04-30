@@ -33,12 +33,12 @@ router.post("/signup", async (req, res) => {
       req.body.isVerifiedBySuperAdmin = true;
       req.body.isVerified = true;
     }
+
+    req.body.companyInfo = { companyName: req.body.companyName };
     user = new User(req.body);
     await user.save();
 
     sendEmail(token, user, 2);
-    console.log("user added");
-
     return res.send({
       success: true,
       msg: "User registered please check yor mail for verification.",
