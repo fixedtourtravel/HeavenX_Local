@@ -165,6 +165,7 @@ function Reply() {
   const initialTax = (detail) => {
     console.log("initial ta", Tax);
     let dest = detail.destination;
+    if (!dest) return;
     let t = [];
     for (let i = 0; i < Tax.length; i++) {
       let c = Tax[i].country;
@@ -176,7 +177,6 @@ function Reply() {
       }
     }
     setcurrTax(t);
-    console.log("my tax is", t);
   };
 
   const initialValues = (detail, instruction) => {

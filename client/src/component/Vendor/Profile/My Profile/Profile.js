@@ -428,7 +428,7 @@ function Profile({ closeButton, user, updateHandler }) {
           )}
         </div>
       </div>
-      {profileRole === "supplier" && (
+      {profileRole === "admin" && (
         <div className={style.profileSection}>
           <h3>Information</h3>
           <div

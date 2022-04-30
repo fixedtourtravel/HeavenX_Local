@@ -40,6 +40,7 @@ function Profile({ closeButton, user, updateHandler }) {
   const [shopFrontView, setshopFrontView] = useState("");
   const auth = useAuth();
   const role = auth.user.role;
+  const profileRole = user.role;
   const disable = role === "supplier" || role === "client";
 
   const CompanyInfo = (User) => {
@@ -905,7 +906,7 @@ function Profile({ closeButton, user, updateHandler }) {
           </Button>
         </span>
       </div>
-      {role === "admin" && (
+      {role === "admin" && profileRole === "supplier" && (
         <Button
           className={style.approve}
           onClick={() => {

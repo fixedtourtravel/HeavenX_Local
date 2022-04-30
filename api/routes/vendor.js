@@ -24,8 +24,7 @@ router.get("/order", isLoggedIn, async (req, res) => {
         (query.cancel = inquery[i].cancel),
         (query.client_confirm = inquery[i].client_confirm),
         (query.vender_confirm = inquery[i].vender_confirm),
-        (query.payment = inquery[i].payment);
-      ans.push({ query: query, status: inquery[i].status });
+        ans.push({ query: query, status: inquery[i].status });
     }
     ans.sort((a, b) =>
       a.query.createdAt < b.query.createdAt
