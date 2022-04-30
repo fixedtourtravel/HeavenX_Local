@@ -1395,6 +1395,7 @@ router.post("/companyDetail", async (req, res) => {
       detail[0].phone2 = req.body.phone2;
       detail[0].gstNo = req.body.gstNo;
       detail[0].panNo = req.body.panNo;
+      detail[0].tagline = req.body.tagline;
       detail[0].save();
     } else {
       let d = await new CompanyDetail(req.body);

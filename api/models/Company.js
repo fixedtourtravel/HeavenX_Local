@@ -16,6 +16,9 @@ const CompanySchema = mongoose.Schema(
     logo: {
       type: String,
     },
+    tagline: {
+      type: String,
+    },
     address: {
       type: String,
     },

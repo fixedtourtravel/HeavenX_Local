@@ -27,6 +27,7 @@ function Company() {
   const [gstNo, setgstNo] = useState("");
   const [panNo, setpanNo] = useState("");
   const [emails, setEmails] = useState([]);
+  const [tagline, setTagline] = useState("");
 
   const CountryStateCityPin = () => {
     let co = [],
@@ -141,9 +142,7 @@ function Company() {
       }
       em.push(e);
     }
-    // console.log(em);
     setEmails(em);
-    console.log(phone1, phone2);
     await axios({
       method: "post",
       url: ROUTES.BASELINK + "/admin/companyDetail",
@@ -159,6 +158,7 @@ function Company() {
         phone2: phone2,
         gstNo: gstNo,
         panNo: panNo,
+        tagline: tagline,
       },
       headers: {
         "Content-type": "application/json",
@@ -225,6 +225,7 @@ function Company() {
   };
 
   const initialValues = (data) => {
+    console.log(data);
     if (data) {
       setName(data.name);
       setcity(data.city);
@@ -236,6 +237,7 @@ function Company() {
       setpanNo(data.panNo);
       setgstNo(data.gstNo);
       setaddress(data.address);
+      setTagline(data.tagline);
       if (data.email) {
         let e = "";
         for (let i = 0; i < data.email.length; i++) {
@@ -290,12 +292,19 @@ function Company() {
               }}
             ></Input>
           </div>
+
           <div className={style.compre}>
             {image && image !== "" && (
               <img src={image} alt={logo} className={style.logo}></img>
             )}
           </div>
         </div>
+        <h5>Tagline </h5>
+        <Input
+          type="text"
+          value={tagline}
+          onChange={(e) => setTagline(e.target.value)}
+        ></Input>
         <h5>
           Email Id (Multiple emails must be seperated by comma or white space)
         </h5>

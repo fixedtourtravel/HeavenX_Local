@@ -16,6 +16,7 @@ function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
   const [logo, setLogo] = useState("");
   const [name, setName] = useState("");
+  const [tagline, settagline] = useState("");
 
   const auth = useAuth();
 
@@ -37,6 +38,7 @@ function Navbar() {
     }).then((res) => {
       if (res.data.data && res.data.data.name) {
         setName(res.data.data.name);
+        settagline(res.data.data.tagline);
       }
     });
   };
@@ -88,8 +90,8 @@ function Navbar() {
         <div className="nav-left">
           <img src={logo} alt="logo" />
           <div className="title">
-            <div className="title-name">{name}</div>
-            <div className="title-tagline">Tag line...</div>
+            <div className={`title-name bold`}>{name}</div>
+            <div className="title-tagline">{tagline}</div>
           </div>
         </div>
         <div className="nav-right">

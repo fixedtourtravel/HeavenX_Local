@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [name, setName] = useState("");
+  const [tagline, settagline] = useState("");
 
   const getCompanyInfo = async () => {
     await axios({
@@ -24,6 +25,7 @@ export default function Footer() {
     }).then((res) => {
       if (res.data.data && res.data.data.name) {
         setName(res.data.data.name);
+        settagline(res.data.data.tagline);
       }
     });
   };
@@ -36,7 +38,7 @@ export default function Footer() {
       <div className="row row-padding">
         <div className="col-4 text-left">
           <h1>{name}</h1>
-          <div>Tagline...</div>
+          <div>{tagline}</div>
         </div>
         {/* <div className="col-6 ml-auto text-right">
           <span className="footer-social-text">Get Social</span>&nbsp;&nbsp;{" "}
