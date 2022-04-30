@@ -8,7 +8,7 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 
 export default function Crousel() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 80;
+  const chevronWidth = 60;
   const [place, setPlace] = useState([]);
 
   const getData = () => {
@@ -40,7 +40,7 @@ export default function Crousel() {
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
-        numberOfCards={3}
+        numberOfCards={5}
         gutter={80}
         leftChevron={
           <button
