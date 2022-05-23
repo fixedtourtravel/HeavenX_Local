@@ -388,11 +388,6 @@ select {
   flex-wrap: nowrap;
 }
 
-.othercostRow1 input {
-  max-width: 50%;
-  text-align: center;
-}
-
 .othercostRowinput {
   border-left: 1px solid black;
 }

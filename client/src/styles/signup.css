@@ -1,12 +1,14 @@
 .signupPage {
-  min-height: 85vh;
-  overflow-y: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 91vh;
+  overflow-y: hidden;
   background-color: #b0f4d7;
   position: relative;
 }
 .signup-Logo {
   position: absolute;
-  left: 120px;
+  left: 5%;
   top: 16%;
   z-index: 10;
   height: 600px;

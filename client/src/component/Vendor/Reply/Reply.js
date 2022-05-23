@@ -2641,7 +2641,7 @@ function Reply() {
               <div className={style.othercostRow}>
                 <input
                   readOnly={user_role === "client"}
-                  type="number"
+                  type="text"
                   min="0"
                   placeholder="%"
                   value={discount}
@@ -2699,7 +2699,8 @@ function Reply() {
                     }}
                     disabled={user_role === "client"}
                     style={{
-                      maxWidth: "50%",
+                      maxWidth: "80%",
+                      minWidth: "80%",
                       maxHeight: "30px",
                       paddingTop: "0",
                       paddingBottom: "0",
@@ -2717,15 +2718,9 @@ function Reply() {
                         );
                       }
                       return <></>;
-                    })}{" "}
+                    })}
                   </Input>
-                  <input
-                    readOnly
-                    type="number"
-                    min="0"
-                    placeholder="%"
-                    value={taxper}
-                  ></input>
+                  <div style={{ textAlign: "center",paddingLeft:"20px" }}> {taxper}%</div>
                 </div>
                 <input
                   readOnly

@@ -1023,7 +1023,6 @@ router.post("/upload/:country", async (req, res) => {
         console.log("error in multer ", err);
         return;
       }
-      console.log("req.body", req.files.country[0].filename);
       if (img && fs.existsSync(path.join(__dirname, "..", img))) {
         fs.unlinkSync(path.join(__dirname, "..", img));
       }

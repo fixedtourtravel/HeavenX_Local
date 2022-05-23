@@ -12,7 +12,7 @@ import Image from "../../Vendor/Inquery/Image";
 import { useAuth } from "../../../context/AuthContext";
 import Payment from "../../Vendor/model/payment/Payment";
 
-export default function OrderCard({ order }) {
+export default function OrderCard({ order, index }) {
   const [cardOpen, setCardOpen] = useState(false);
   const [loading, setloading] = useState(false);
   const [data, setData] = useState([]);
@@ -48,6 +48,7 @@ export default function OrderCard({ order }) {
     <div className={style.home}>
       <Loading Loading={loading} />
       <div className={style.booking_row}>
+        <div style={{ margin: "10px" }}>{index}</div>
         <Image name={order.arraydestination[0].queryCountry} />
         <div className={style.booking_detail}>
           <div className={style.orderId}>
